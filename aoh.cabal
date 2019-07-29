@@ -1,0 +1,25 @@
+name:                aoh
+version:             0.1.0.0
+license:             BSD3
+license-file:        LICENSE
+author:              Cameron Dart
+maintainer:          camerondart13@gmail.com
+build-type:          Simple
+extra-source-files:  ChangeLog.md
+cabal-version:       >=1.10
+
+library AOH
+   exposed-modules:    Solutions
+  build-depends:       base >=4.11 && <4.12
+                     , bytestring
+                     , containers
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
+executable runner
+  build-depends:       base >=4.11 && <4.12
+                     , AOH
+  hs-source-dirs:      app
+  default-language:    Haskell2010
+  main-is:             Main.hs
+
